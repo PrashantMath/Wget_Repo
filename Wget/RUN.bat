@@ -4,11 +4,14 @@ set ps_helper_access=polyspace-access -host demo-polyspace-review.gnb.mathworks.
 set RESULT=ResultBF
 set PROG=WgetCI
 set PARENT_PROJECT_ON_ACCESS=public/pmathapa
-set WSP=%WORKSPACE%
+set WSP=%WORKSPACE%/Wget
 rd /S /Q Notification && md Notification
 
 
-polyspace-bug-finder-server.exe -options-file "%WSP%\target.opts" -options-file "%WSP%\PSOptions.opts" -results-dir "%WSP%\R_BF_%BUILD_NUMBER%"   ||  EXIT /B 200
+REM polyspace-bug-finder-server.exe -options-file "%WSP%\target.opts" -options-file "%WSP%\PSOptions.opts" -results-dir "%WSP%\R_BF_%BUILD_NUMBER%"   ||  EXIT /B 200
+
+
+polyspace-bug-finder-server.exe -options-file "%WSP%\Wget.opts" -results-dir "%WSP%\R_BF_%BUILD_NUMBER%"   ||  EXIT /B 200
 
 %ps_helper_access% -create-project %PARENT_PROJECT_ON_ACCESS%    ||  EXIT /B 200
 
