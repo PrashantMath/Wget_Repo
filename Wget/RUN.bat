@@ -4,7 +4,7 @@ set ps_helper_access=polyspace-access -host demo-polyspace-review.gnb.mathworks.
 set RESULT=ResultBF
 set PROG=WgetCI
 set PARENT_PROJECT_ON_ACCESS=public/pmathapa
-set WSP=%WORKSPACE%/Wget
+set WSP=%WORKSPACE%\Wget
 rd /S /Q Notification && md Notification
 
 
