@@ -1,4 +1,4 @@
-set PATH=C:\Polyspace\PolyspaceDesktop\R2024a\polyspace\bin;%PATH%
+set PATH=C:\Polyspace\PolyspaceServer\R2024a\polyspace\bin;%PATH%
 
 set ps_helper_access=polyspace-access -host demo-polyspace-review.gnb.mathworks.com -port 9443 -protocol http -credentials-file c:\Polyspace\PolyspaceServer\myCredentials.txt
 set RESULT=ResultBF
