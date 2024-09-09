@@ -11,7 +11,7 @@ rd /S /Q Notification && md Notification
 REM polyspace-bug-finder-server.exe -options-file "%WSP%\target.opts" -options-file "%WSP%\PSOptions.opts" -results-dir "%WSP%\R_BF_%BUILD_NUMBER%"   ||  EXIT /B 200
 
 
-polyspace-bug-finder-server.exe -options-file "%WSP%\Wget_src.opts" -results-dir "%WSP%\R_BF_%BUILD_NUMBER%"   ||  EXIT /B 200
+polyspace-bug-finder-server.exe -options-file "%WSP%\Wget_srcs.opts" -results-dir "%WSP%\R_BF_%BUILD_NUMBER%"   ||  EXIT /B 200
 
 %ps_helper_access% -create-project %PARENT_PROJECT_ON_ACCESS%    ||  EXIT /B 200
 
